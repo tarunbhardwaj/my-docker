@@ -14,10 +14,8 @@ RUN \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common && \
-  apt-get install -y curl git htop man unzip vim openssh-server
-
-# Set initial password for root
-RUN echo 'root:password' | chpasswd
+  apt-get install -y curl git htop man unzip vim openssh-server && \
+  apt-get install -y python-dev libxml2-dev libxslt-dev python-lxml libpq-dev
 
 # Add keys to ssh
 RUN mkdir /root/.ssh
