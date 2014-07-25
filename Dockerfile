@@ -5,8 +5,14 @@
 #
 
 # Pull base image.
-FROM ubuntu:12.04
+FROM ubuntu:14.04
 MAINTAINER Tarun Bhardwaj <mailme@tarunbhardwaj.com>
+
+# Setup environment and UTF-8 locale
+ENV DEBIAN_FRONTEND noninteractive
+ENV LANGUAGE en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
 
 # Update and Install.
 RUN \
